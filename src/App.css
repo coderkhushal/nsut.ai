@@ -1,38 +1,345 @@
-.App {
+*{
+  margin:0;
+  padding: 0;
+}
+
+body{
+  /* color: bisque; */
+  color:#F5FEFE;
+  /* background-color: rgb(0, 0, 0); */
+  background-color: #010E0E;
+}
+
+
+/* navbar styling */
+#navcontainer{
+  display: flex;
+}
+nav{
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  /* background-color: rgb(19, 19, 19); */
+  /* opacity: 0.8; */
+  /* background-color: rgb(40, 7, 125); */
+  background-color:#022725;
+  display: block;
+  width: 100%;
+  opacity: 0.8;
+  
+}
+
+nav ul {
+  /* background-color: rgb(19, 19, 19); */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  overflow: auto;
+  width: 100%;
+  margin-left: 40px;
+  
+}
+
+li{
+  
+  list-style: none;
+  margin: 1rem;
+  margin-left: 2rem;
+  transition: all 0.2s 0s;
+  font-size: x-large;
+  font-weight: bold;
+  
+}
+
+li:hover{
+  transform: scale(1.1);
+}
+li a:hover{
+  cursor: pointer;
+  border-bottom: 2px solid bisque;
+
+  
+}
+li a{
+  text-decoration: none;
+  color: bisque;
+}
+
+
+/* home section designing */
+#videocontainer{
+
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  opacity: 0.5;
+  
+}
+
+.mainheading{
+  position: absolute;
+  top: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+/*about section styling*/
+#aboutimage{
+  width: 20rem;
+  border-radius: 2rem;
+  /* position:absolute;
+  right: 1rem; */
+}
+
+#about{
+  padding-top: 10rem;
+  background-color: rgb(5, 1, 21);
+}
+
+/* project section styling */
+#projectscontainer{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem;
+  justify-content: space-evenly;  
+
+}
+
+#project{
+  display: flex;
+  flex-direction: column;
+  max-width: 25%;
+  border: 2px solid white;
+  max-height: 35rem;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 2rem;
+  }
+
+#project img{
+  max-width: 100%;
+}
+.projectcontent{
+  display: flex;
+  max-width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  /* border: 2px solid white; */
+}
+
+.projectheading{
+  height: 5rem;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* footer section styling */
+#footercontainer{
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem;
+  background-color:#022725;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.a-footer{
+  text-decoration: none;
+  color: bisque;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+i{
+  margin: 1rem;
+  font-size: x-large;
+}
+
+
+
+/* about page styling */
+#team{
+  padding:2rem 10rem;
+  
+}
+.margintop{
+  margin-top: 3rem;
+}
+
+/* membersection styling */
+#membernav{
+  display: flex;
+  margin-top: 3rem;
+  justify-content: space-evenly;
+  padding:1rem 2rem ;
+}
+
+.membersnavbtn{
+  padding: 0.7rem 8% ;
+  font-size: x-large;
+  cursor:pointer;
+  height: 4rem;
+  /* margin: 2rem 2rem; */
+  border-radius: 1rem;
+  /* background-image: linear-gradient(rgb(168, 110, 255), rgb(22, 20, 20)); */
+  background-color: #29BBB5;
+  transition: all 0.1s;
+  /* color: bisque; */
+  font-weight:  bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.membersnavbtn:hover{
+  transform: scale(1.1);
+}
+
+.teammembers{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  padding: 6rem;
+  justify-content: space-evenly;
+}
+
+.temmember{
+  background-color: #022725;
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
+  text-align: center;
+  padding:2rem;
+  align-items: center;
+  width: 70%;
+  height: 33rem;
+  border: 5px solid white;
+  box-shadow: 10px 10px 10px beige;
+  border-radius: 4rem;
+  margin-top: 4rem;
+}
+.memberimg{
+  height:14rem;
+  border-radius: 20rem;
+  
+}
+
+
+.social img{
+  width: 2rem;
+  margin: 1rem;
+  transition: all 0.1s;
+
+  /* border : 2px solid white */
+}
+.social img:hover{
+  transform: scale(1.1);
+}
+.membersabout{
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  font-family: Habibi;
+  margin: auto;
+  /* color:aquamarine; */
+  padding:1rem;
+  overflow:auto;
+}
+.socialbox{
+  display: flex;
+  height: 3rem;
+  width: 100%;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position:relative;
+  bottom: 0px;
+
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+/* utility classes */
+.primary-h{
+  font-family: Quicksand;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 5rem;
+}
+.middle-h{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-size: 4rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.secondary-h{
+  display: flex;
+  justify-content: center;
+  
+  font-size: 2.5rem;
+}
+
+
+.content{
+  overflow-y: auto;
+}
+
+
+
+/* CSS */
+.a-primary {
+  position: relative;
+  bottom:0px;
+  margin: auto;
+  margin-top: 10px;
+  align-items: center;
+  /* background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB); */
+  background-color: #29BBB5;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 50%;
+  min-width: 140px;
+  padding: 10px 20px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.1s 0s;
+}
+
+.a-primary:active,
+.a-primary:hover {
+  outline: 0;
+  transform: scale(1.1);
+}
+
+
+.followlinks{
+  color: bisque;
+  font-size: x-large;
+  margin: 0.5rem 1rem;
+}
+.nohover:hover{
+  transform: scale(1);
 }
