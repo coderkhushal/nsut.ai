@@ -81,6 +81,7 @@ li a {
 
 }
 
+
 .mainheading {
   position: absolute;
   top: 2rem;
@@ -90,7 +91,8 @@ li a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  font-size: 2.5rem;
+  text-align: center;
 
 }
 
@@ -106,7 +108,13 @@ li a {
   padding-top: 10rem;
   background-color: rgb(5, 1, 21);
 }
-
+#aboutcontainer{
+  display: flex;
+  margin: auto;
+  padding: 1rem;
+  width: 90%;
+  margin-top: 1rem;
+}
 /* project section styling */
 #projectscontainer {
   display: grid;
@@ -192,11 +200,14 @@ i {
   font-size: x-large;
 }
 
-
-
+#footerlogo{
+  max-width:15rem; 
+  border-radius:50rem;
+}
 /* about page styling */
 #team {
   padding: 2rem 5rem;
+  text-align: center;
 
 }
 
@@ -384,7 +395,9 @@ i {
 .nohover:hover {
   transform: scale(1);
 }
-
+.highlight{
+  background-color: #E70D15;
+}
 
 /* responsive design css */
 @media only screen and (min-width: 425px) and (max-width:768px)  {
@@ -396,12 +409,118 @@ i {
   }
 }
 
-@media only screen and (max-width:425px){
+@media only screen and (max-width:426px){
+  /* navbar styling */
+  nav ul{
+    margin-left: 0;
+  }
+  nav img{
+    width: 5rem;
+  }
+
+  /* home section styling */
+  .mainheading{
+    justify-content: flex-start;
+    padding-top: 5rem;
+    font-size: 1rem;
+    text-align: center;
+    margin: auto;
+    height: 5%;
+    top: 2rem;
+  }
+
+  #videocontainer{
+    padding-top: 1rem;
+    margin-left: 1rem;
+    height: 20rem;
+
+  }
+
+  /* about section  */
+  #about{
+    padding-top: 0;
+  }
+  #aboutimage{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    /* z-index: -1; */
+    background: url("https://th.bing.com/th/id/OIP.G7xXV8ZFcMehUJHgNCF-XwAAAA?pid=ImgDet&rs=1") no-repeat center/cover;
+    opacity: 0.3;
+    /* border: 2px solid white; */
+  }
+
   #projectscontainer{
     grid-template-columns: 1fr 1fr;
   }
-  .mainheading{
-    justify-content: flex-start;
-    padding-top: 10rem;
+
+  /* projects section styling */
+  #projectscontainer{
+    padding:0 3rem;
+    /* border: 2px solid white; */
+    margin-left: 1rem;
   }
+  .project{
+    margin: 0.5rem 0.5rem;
+    
+  }
+  /* footer styling */
+  #footerlogo{
+    width: 5rem;
+  }
+  #footercontainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 1rem;
+  }
+  .fcontainer{
+    margin: 1rem;
+  }
+  
+  /* utility changes */
+  .primary-h{
+    font-size: 2rem;
+  }
+  .secondary-h{
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  /* team page styling */
+  #team{
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+  #membernav{
+    display: grid;
+    margin-bottom: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+  .membersnavbtn{
+    width:95%;
+    /* padding-left: 0; */
+    margin: 0.5rem 0;
+    font-size: large;
+    /* margin:0 2rem; */
+  }
+  .teammembers{
+    grid-template-columns: 1fr ;
+  }
+
+  .temmember{
+    
+    margin:1rem 2rem;
+    margin-left: 0;
+    padding:0 2rem;
+  }
+  .memberimg{
+    /* width: 100%; */
+    height: 30%;
+  }
+}
+@media only screen and (max-width:376px){
+    #projectscontainer{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
 }

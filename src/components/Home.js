@@ -25,13 +25,13 @@ const Home = () => {
             </div>
             <div className="mainheading">
                 <h1 className='primary-h'> NSUT.AI </h1>
-                <h2 className='secondary-h'>(Netaji Subhash University of Technology)</h2>
+                <h2 className=''>(Netaji Subhash University of Technology)</h2>
             </div>
  
 
            <section id='about'>
             <h2 className='secondary-h'>About Us</h2>
-            <div style={{display:"flex" , padding:"2rem", width:"90%", margin:"auto", justifyContent:"space-between"}}>
+            <div id="aboutcontainer" >
             <p style={{fontSize:"x-large"}}>Artificial Intelligence Research Group - Netaji Subhas University of Technology is a student-run, non-profit community of young researchers interested in the applications of Al and Data Science in a wide range of topics</p>
             <img id='aboutimage' src="https://th.bing.com/th/id/OIP.G7xXV8ZFcMehUJHgNCF-XwAAAA?pid=ImgDet&rs=1" alt=""  />
             </div>

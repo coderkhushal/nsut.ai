@@ -7,7 +7,18 @@ const Team = () => {
 
   const context= useContext(Maincontext)
   const{setmembers}= context;
+  const handlehighlight=(e)=>{
+    for(let i of Array.from(document.getElementsByClassName("membersnavbtn"))){
+    
+      if(i.classList.contains("highlight")){
 
+        i.classList.remove("highlight");
+        
+      }
+      
+    }
+    e.target.classList.add("highlight")
+  }
   const loadteam=async()=>{
     const response=  await fetch("https://airg-backend.onrender.com/team")
     let data= await response.json();
@@ -33,11 +44,11 @@ NSUT.AI is backed by Intel, and was established to promote research and enable i
     
     <h1 className='middle-h'>Core Members</h1>
     <div id='membernav'>
-      <button className='membersnavbtn' onClick={(e)=>{setmemberpost(e.target.innerText)}}>All</button>
+      <button className='membersnavbtn' onClick={(e)=>{handlehighlight(e);setmemberpost(e.target.innerText)}}>All</button>
       {/* <button className='membersnavbtn'>President</button> */}
-      <button className='membersnavbtn'onClick={(e)=>{setmemberpost(e.target.innerText)}}>Vice President</button>
-      <button className='membersnavbtn'onClick={(e)=>{setmemberpost(e.target.innerText)}}>Director</button>
-      <button className='membersnavbtn'onClick={(e)=>{setmemberpost("Advisor")}}>Advisory</button>
+      <button className='membersnavbtn'onClick={(e)=>{handlehighlight(e);setmemberpost(e.target.innerText)}}>Vice President</button>
+      <button className='membersnavbtn'onClick={(e)=>{handlehighlight(e);setmemberpost(e.target.innerText)}}>Director</button>
+      <button className='membersnavbtn'onClick={(e)=>{handlehighlight(e);setmemberpost("Advisor")}}>Advisory</button>
     </div>
     <TeamMembers filter ={ memberpost}/>
     <Footer/>
