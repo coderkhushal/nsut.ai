@@ -387,7 +387,7 @@ i {
 
 
 /* responsive design css */
-@media only screen and (min-width: 1000px) and (max-width:1440px)  {
+@media only screen and (min-width: 425px) and (max-width:768px)  {
   .teammembers{
     grid-template-columns: 1fr 1fr;
   }
@@ -396,7 +396,7 @@ i {
   }
 }
 
-@media only screen and (max-width:1000px){
+@media only screen and (max-width:425px){
   #projectscontainer{
     grid-template-columns: 1fr 1fr;
   }
