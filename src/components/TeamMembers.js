@@ -22,6 +22,8 @@ const TeamMembers = (props) => {
                 return (<TeamMember key = {e.name} filter={props.filter}  image= {e.image} name = {e.name} post ={e.post} about ={e.about} github ={e.github} linkedin= {e.linkedin}/>)
             }
         })}
+        {!members && <h1 className='secondary-h'>Loading</h1>
+        }
     </div>
   )
 }
