@@ -9,7 +9,7 @@ const Projects = () => {
       {projects && projects.map((e)=>{
         return (<Project image = {e.image} heading = {e.heading} content= {e.content} code_url = {e.code_url} />)
       })}
-      {!projects && <h2 className='primary-h'>Loading</h2>}
+      {!projects && <h2 className='primary-h center'>Loading</h2>}
       
     </div>
   )
