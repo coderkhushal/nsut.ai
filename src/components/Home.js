@@ -3,6 +3,7 @@ import background from '../assets/background.mp4'
 import Projects from './Projects'
 import Maincontext from '../context/Maincontext'
 import Footer from './Footer'
+import Contact from './Contact'
 
 const Home = () => {
     const context = useContext(Maincontext);
@@ -27,7 +28,7 @@ const Home = () => {
                 <h1 className='primary-h'> NSUT.AI </h1>
                 <h2 className=''>(Netaji Subhash University of Technology)</h2>
             </div>
- 
+
 
            <section id='about'>
             <h2 className='secondary-h'>About Us</h2>
@@ -47,6 +48,7 @@ const Home = () => {
                 <Projects/>
             </section>
 
+            <Contact/>
             <Footer/>
         </>
 
